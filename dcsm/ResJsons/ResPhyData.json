@@ -1,0 +1,102 @@
+{
+  "data": [
+    {
+      "name": "Server NO. 1",
+      "alias": "ubuntu",
+      "resCategory": "物理资产",
+      "resType": "服务器",
+      "isON": true,
+      "level":  2,
+      "sn": 1,
+      "note": "This is the first physical res",
+      "createTime": "2020-10-18 15:11:12",
+      "ip":[
+        "202.197.165.12",
+        "202.197.165.13"
+      ],
+      "parent": {
+        "name": "NUDT Data Center",
+        "id": "1",
+        "level": 1
+      }
+    },
+    {
+      "name": "Server NO.2",
+      "alias": "ubuntu",
+      "resCategory": "物理资产",
+      "resType": "服务器",
+      "isON": true,
+      "level":  2,
+      "sn": 2,
+      "note": "This is the first second res",
+      "createTime": "2020-10-18 18:11:12",
+      "ip":[
+        "202.197.165.15",
+        "202.197.165.16"
+      ],
+      "parent": {
+        "name": "NUDT Data Center",
+        "id": "1",
+        "level": 1
+      }
+    },
+    {
+      "name": "Server NO. 1",
+      "alias": "window10",
+      "resCategory": "物理资产",
+      "resType": "服务器",
+      "isON": true,
+      "level":  2,
+      "sn": 3,
+      "note": "This is the third physical res",
+      "createTime": "2020-10-18 15:11:12",
+      "ip":[
+        "202.197.163.110",
+        "202.197.163.113"
+      ],
+      "parent": {
+        "name": "Beijing Data Center",
+        "id": "2",
+        "level": 1
+      }
+    },
+    {
+      "name": "Switch NO.1",
+      "alias": "switch",
+      "resCategory": "物理资产",
+      "resType": "交换机",
+      "isON": true,
+      "level":  2,
+      "sn": 4,
+      "note": "This is the forth physical",
+      "createTime": "2020-10-18 18:11:12",
+      "ip":[
+        "202.197.163.15"
+      ],
+      "parent": {
+        "name": "Beijing Data Center",
+        "id": "2",
+        "level": 1
+      }
+    },
+    {
+      "name": "Switch NO.1",
+      "alias": "switch",
+      "resCategory": "物理资产",
+      "resType": "交换机",
+      "isON": true,
+      "level":  2,
+      "sn": 5,
+      "note": "This is the fifth physical",
+      "createTime": "2020-10-19 18:11:12",
+      "ip":[
+        "202.197.165.15"
+      ],
+      "parent": {
+        "name": "NUDT Data Center",
+        "id": "1",
+        "level": 1
+      }
+    }
+  ]
+}

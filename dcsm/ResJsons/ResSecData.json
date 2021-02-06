@@ -1,0 +1,98 @@
+{
+  "data": [
+    {
+      "id": "1-1-14",
+      "name": "Elastics",
+      "alias": "Elastics",
+      "createTime": "2020-10-19 18:11:12",
+      "level": 2,
+      "sn": 14,
+      "note": "This is a Elastics",
+      "resCategory": "安全资产",
+      "resType": "Elastics",
+      "ip": "6.6.6.6",
+      "port": 9200,
+      "version": "5.5.1",
+      "commandList": [
+        {
+          "ename": "start",
+          "cname": "启动",
+          "description": "启动ES服务",
+          "paranum": 2,
+          "parameterList": [
+            {
+              "ename": "ip",
+              "cname": "IP地址",
+              "description": null,
+              "formate": "IPv4地址，例如X.X.X.X",
+              "regular": "*.*.*.*",
+              "isOptional": false,
+              "defaultval": "127.0.0.1"
+            },
+            {
+              "ename": "port",
+              "cname": "端口",
+              "description": null,
+              "formate": "0-65538",
+              "regular": "0-655538",
+              "isOptional": false,
+              "defaultval": "9200"
+            }
+          ]
+        }
+      ],
+      "parent": {
+        "name": "Server NO.1",
+        "id": "1-1",
+        "level": 2
+      }
+    },
+    {
+      "id": "1-1-15",
+      "name": "Elastics",
+      "alias": "Elastics",
+      "createTime": "2020-10-19 18:11:12",
+      "level": 2,
+      "sn": 15,
+      "note": "This is a Elastics",
+      "resCategory": "安全资产",
+      "resType": "Elastics",
+      "ip": "6.6.6.6",
+      "port": 9200,
+      "version": "5.5.1",
+      "commandList": [
+        {
+          "ename": "start",
+          "cname": "启动",
+          "description": "启动ES服务",
+          "paranum": 2,
+          "parameterList": [
+            {
+              "ename": "ip",
+              "cname": "IP地址",
+              "description": null,
+              "formate": "IPv4地址，例如X.X.X.X",
+              "regular": "*.*.*.*",
+              "isOptional": false,
+              "defaultval": "127.0.0.1"
+            },
+            {
+              "ename": "port",
+              "cname": "端口",
+              "description": null,
+              "formate": "0-65538",
+              "regular": "0-655538",
+              "isOptional": false,
+              "defaultval": "9200"
+            }
+          ]
+        }
+      ],
+      "parent": {
+        "name": "Server NO.1",
+        "id": "1-1",
+        "level": 2
+      }
+    }
+  ]
+}

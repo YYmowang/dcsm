@@ -1,0 +1,133 @@
+{
+  "data": [
+    {
+      "name": "User VM NO. 1",
+      "alias": "kylin",
+      "resCategory": "虚拟资产",
+      "resType": "业务虚拟机",
+      "isON": true,
+      "level":  3,
+      "sn": 1,
+      "note": "This is a user VM in NUDT Data Center",
+      "createTime": "2020-10-19 20:11:12",
+      "ip":[
+        "202.197.165.201"
+      ],
+      "parent": {
+        "name": "Server NO. 1",
+        "id": "1-1",
+        "level": 2
+      }
+    },
+    {
+      "name": "User VM NO. 2",
+      "alias": "kylin",
+      "resCategory": "虚拟资产",
+      "resType": "业务虚拟机",
+      "isON": true,
+      "level":  3,
+      "sn": 2,
+      "note": "This is a user VM in NUDT Data Center",
+      "createTime": "2020-10-19 20:11:12",
+      "ip":[
+        "202.197.165.202"
+      ],
+      "parent": {
+        "name": "Server NO. 1",
+        "id": "1-1",
+        "level": 2
+      }
+    },
+    {
+      "name": "Security VM NO. 2",
+      "alias": "kylin",
+      "resCategory": "虚拟资产",
+      "resType": "安全虚拟机",
+      "isON": true,
+      "level":  3,
+      "sn": 3,
+      "note": "This is a security VM in NUDT Data Center",
+      "createTime": "2020-10-19 20:11:12",
+      "ip":[
+        "202.197.165.205"
+      ],
+      "parent": {
+        "name": "Server NO. 1",
+        "id": "1-1",
+        "level": 2
+      }
+    },
+    {
+      "name": "Openvswitch NO. 1",
+      "alias": "ovs",
+      "resCategory": "虚拟资产",
+      "resType": "虚拟交换机",
+      "isON": true,
+      "level":  3,
+      "sn": 7,
+      "note": "This is an ovs in NUDT Data Center",
+      "createTime": "2020-10-19 20:11:12",
+      "ip":[],
+      "parent": {
+        "name": "Server NO. 1",
+        "id": "1-1",
+        "level": 2
+      }
+    },
+    {
+      "name": "User VM NO. 1",
+      "alias": "kylin",
+      "resCategory": "虚拟资产",
+      "resType": "业务虚拟机",
+      "isON": true,
+      "level":  3,
+      "sn": 4,
+      "note": "This is a user VM in Beijing Data Center",
+      "createTime": "2020-10-19 20:11:12",
+      "ip":[
+        "202.197.163.201"
+      ],
+      "parent": {
+        "name": "Server NO. 1",
+        "id": "2-3",
+        "level": 2
+      }
+    },
+    {
+      "name": "Security VM NO. 1",
+      "alias": "kylin",
+      "resCategory": "虚拟资产",
+      "resType": "安全虚拟机",
+      "isON": true,
+      "level":  3,
+      "sn": 5,
+      "note": "This is a security VM in Beijing Data Center",
+      "createTime": "2020-10-19 20:11:12",
+      "ip":[
+        "202.197.163.205"
+      ],
+      "parent": {
+        "name": "Server NO. 1",
+        "id": "2-3",
+        "level": 2
+      }
+    },
+    {
+      "name": "Openvswitch NO. 1",
+      "alias": "ovs",
+      "resCategory": "虚拟资产",
+      "resType": "虚拟交换机",
+      "isON": true,
+      "level":  3,
+      "sn": 6,
+      "note": "This is an ovs in Beijing Data Center",
+      "createTime": "2020-10-19 20:11:12",
+      "ip":[],
+      "parent": {
+        "name": "Server NO. 1",
+        "id": "2-3",
+        "level": 2
+      }
+    }
+  ]
+}

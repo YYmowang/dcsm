@@ -1,0 +1,36 @@
+{
+  "data": [
+    {
+      "name": "NUDT Data Center",
+      "level":  1,
+      "snInLevel": 1,
+      "note": "This is an example of data center doc",
+      "createTime": "2020-10-16 10:11:12",
+      "location": {
+        "country": "China",
+        "province": "Hunan",
+        "city": "Changsha",
+        "geoPoint": {
+          "lat": 42.11,
+          "lon": 100.22
+        }
+      }
+    },
+    {
+      "name": "Beijing Data Center",
+      "level":  1,
+      "snInLevel": 2,
+      "note": "This is an example of data center doc",
+      "createTime": "2020-10-17 15:11:12",
+      "location": {
+        "country": "China",
+        "province": "Beijing",
+        "city": "Beijing",
+        "geoPoint": {
+          "lat": 52.11,
+          "lon": 110.22
+        }
+      }
+    }
+  ]
+}

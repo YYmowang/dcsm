@@ -1,0 +1,19 @@
+{
+  "data": [
+    {
+      "typename": "其它"
+    },
+    {
+      "typename": "SecAgent"
+    },
+    {
+      "typename": "Elastics"
+    },
+    {
+      "typename": "Redis"
+    },
+    {
+      "typename": "Logstash"
+    }
+  ]
+}

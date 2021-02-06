@@ -1,0 +1,150 @@
+syntax = "proto3";
+
+option java_generic_services = true;
+option java_multiple_files = true;
+option java_package = "nudt.dcsm.grpc";
+
+//SecAgent register to SecManager
+service RegisterService {
+    // register agent and host
+    rpc regAgent (AgentRequest) returns (AgentReply) {}
+    // register virtual bridge
+    rpc regVBridge (VBridgeRequest) returns (VBridgeReply) {}
+    // register virtual machine
+    rpc regVMachine (VMachineRequest) returns (VMachineReply) {}
+    // register virtual pot
+    rpc regVPot (VPotRequest) returns (VPotReply) {}
+    // register security function
+    rpc regSecFun(SecFunRequest) returns (SecFunReply) {}
+}
+message AgentRequest {
+    string agentName = 1;
+    string agentIP = 2;
+    string agentMac = 3;
+
+    // Information of linked interface on host
+    //message HostIpMac {
+    //    string ip = 1;
+    //    string mac = 2;
+    //    string interface = 3;
+    //}
+    repeated string ips = 4;
+
+    // number of virtial machines, bridges, pots and security services on host
+    int32 vm_num = 5;
+    int32 vb_num = 6;
+    int32 vpot_num = 7;
+    int32 service_num = 8;
+
+    // ture if the agent runs on a virtual machine
+    bool isVirtHost = 9;
+}
+message AgentReply {
+    // assigned by SecManager
+    string agentID = 1;
+
+    // system resources (eg. ELK ) provided by SecManager
+    int32 sysRes_num = 2;
+    message SysRes{
+        string resID = 1;
+        string resName = 2;
+        string resTypeSys = 3;
+        string resIP = 4;
+        string resPort = 5;
+        string resVersion = 6;
+    }
+    repeated SysRes sysRes = 3;
+}
+
+message VBridgeRequest {
+    int32 vb_num = 1;
+    // Information of virtual bridge (eg. ovs) on host
+    message VBridge {
+        string vbName = 1;
+        // virtual bridges connected to
+        repeated string peerVBridge = 2;
+        // physical interfaces connected to
+        repeated string phyInterface = 3;
+    }
+    repeated VBridge vBridge = 2;
+}
+message VBridgeReply {
+    // reply "OK" if success
+    string ack = 1;
+}
+message VMachineRequest {
+    int32 vm_num = 1;
+    message VMachine {
+        string vmName = 1;
+        bool onState = 2;
+        string bridge = 3;
+        string vmMac = 5;
+        //could be empty
+        string vmIP = 6;
+    }
+    repeated VMachine vMaching = 2;
+}
+message VMachineReply {
+    // reply "OK" if success
+    string ack = 1;
+}
+message VPotRequest {
+    int32 vpot_num = 1;
+    message VPot {
+        string vpotName = 1;
+        bool onState = 2;
+        string bridge = 3;
+        string vpotMac = 5;
+        //could be empty
+        string vpotIP = 6;
+    }
+    repeated VPot vpot = 2;
+}
+message VPotReply {
+    // reply "OK" if success
+    string ack = 1;
+}
+message SecFunRequest {
+    string agentID = 1;
+    string secFunName = 2;
+    string secFunType = 3;
+    // 此处还需讨论，原来是上传IP、端口等信息，现在改成 只要URL和相关显示，简化传输和界面显示
+    message URL{
+        // URL name shows on web page, eg. HIDS
+        string urlCName = 1;
+        // URL eg. 202.197.165.145:1234
+        string url = 2;
+        // show what the url is used to
+        string urlDes = 3;
+        string username = 4;
+        string password = 5;
+    }
+    repeated URL url = 4;
+    message CMD{
+        // Chinese name
+        string cmdCName =1;
+        // English name
+        string cmdEName = 2;
+        string cmdDes = 3;
+        int32 para_num = 4;
+        message Para {
+            string paraCName = 1;
+            string paraEName = 2;
+            string paraDes = 3;
+            // Parameter format requirement
+            string paraFormat = 4;
+            // Regular expression fo parameter format check
+            string paraRegular = 5;
+            // If the parameter is optional, default is false.
+            bool paraIsOptional = 6;
+            // Default value
+            string paraDefaultVal = 7;
+        }
+        repeated Para para = 5;
+    }
+    repeated CMD cmd = 5;
+}
+message SecFunReply {
+    // reply "OK" if success
+    string ack = 1;
+}

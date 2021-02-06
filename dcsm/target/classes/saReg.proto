@@ -1,0 +1,55 @@
+syntax = "proto3";
+
+option java_generic_services = true;
+option java_multiple_files = true;
+option java_package = "nudt.dcsm.grpc";
+
+// define a service 
+//1. secure_agent register to secure_manager
+service saRegService {
+    // define the interface and data type
+    rpc SayHello (HelloRequest) returns (HelloReply) {}
+    rpc saReg (saReg2smRequest) returns (saReg2smReply) {}
+}
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+  message location {
+    string country = 1;
+    string city = 2;
+  }
+  location loc = 2;
+}
+
+// The response message containing the greetings
+message HelloReply {
+  string message = 1;
+}
+
+
+// define the data type of request
+message saReg2smRequest {
+	string saName = 1;
+    string saIP = 2;
+	string saMac = 3;
+	bool Is_phy = 4;
+	int32 vm_num = 5;	
+	repeated string vmip = 6;
+	int32 sservice_num = 7;
+	repeated string sservice_name = 8;
+	
+}
+
+// define the data type of response
+message saReg2smReply {
+    string saID = 1;
+    message SaOutput {
+		string soname=1;
+		string version=2;
+        string IP = 3;
+        int32 port = 4;
+    }
+    repeated SaOutput SaOutputserver = 2;
+	repeated string on_service_name = 3;
+}	
+

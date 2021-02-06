@@ -1,0 +1,80 @@
+{
+  "data": [
+    {
+      "name": "Elastics",
+      "alias": "Elastics",
+      "version": "6.8.9",
+      "resCategory": "系统资产",
+      "resType": "Elastics",
+      "isON": true,
+      "level":  2,
+      "sn": 10,
+      "note": "This is an Elastics server",
+      "createTime": "2020-10-19 18:11:12",
+      "ip": "202.197.165.15",
+      "port": 9200,
+      "parent": {
+        "name": "Server NO.2",
+        "id": "1-2",
+        "level": 2
+      }
+    },
+    {
+      "name": "Logstash",
+      "alias": "Logstash",
+      "version": "6.8.9",
+      "resCategory": "系统资产",
+      "resType": "Logstash",
+      "isON": true,
+      "level":  2,
+      "sn": 11,
+      "note": "This is an Logstash server",
+      "createTime": "2020-10-19 18:11:12",
+      "ip": "202.197.165.15",
+      "port": 9200,
+      "parent": {
+        "name": "Server NO.2",
+        "id": "1-2",
+        "level": 2
+      }
+    },
+    {
+      "name": "Logstash",
+      "alias": "Logstash",
+      "version": "5.5.1",
+      "resCategory": "系统资产",
+      "resType": "Logstash",
+      "isON": true,
+      "level":  2,
+      "sn": 12,
+      "note": "This is an Logstash server",
+      "createTime": "2020-10-19 18:11:12",
+      "ip": "202.197.165.15",
+      "port": 9200,
+      "parent": {
+        "name": "Server NO.1",
+        "id": "1-1",
+        "level": 2
+      }
+    },
+    {
+      "name": "Elastics",
+      "alias": "Elastics",
+      "version": "5.5.1",
+      "resCategory": "系统资产",
+      "resType": "Elastics",
+      "isON": true,
+      "level":  2,
+      "sn": 13,
+      "note": "This is an Elastics server",
+      "createTime": "2020-10-19 18:11:12",
+      "ip": "202.197.165.15",
+      "port": 9200,
+      "parent": {
+        "name": "Server NO.1",
+        "id": "1-1",
+        "level": 2
+      }
+    }
+  ]
+}

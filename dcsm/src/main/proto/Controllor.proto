@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option java_generic_services = true;
+option java_multiple_files = true;
+option java_package = "nudt.dcsm.grpc";
+
+//SecManager send CMDs of security functions to SecAgent
+service ControllorService {
+    rpc runCommand (CommandRequest) returns (CommandReply) {}
+}
+message CommandRequest {
+    string agentID = 1;
+    string secFunName = 2;
+    string secFunType = 3;
+    string cmdEName = 4;
+    int32 para_num = 5;
+    message Para {
+        string paraEName = 1;
+        string paraValue = 2;
+    }
+   repeated Para para = 6;
+}
+message CommandReply {
+    // reply "OK" if command runs successfully
+    // or reply error message
+    string result = 1;
+}

@@ -1,0 +1,36 @@
+{
+  "data": [
+    {
+      "typeid": 0,
+      "typename": "其它"
+    },
+    {
+      "typeid": 1,
+      "typename": "HIDS"
+    },
+    {
+      "typeid": 2,
+      "typename": "NIDS"
+    },
+    {
+      "typeid": 3,
+      "typename": "Moloch"
+    },
+    {
+      "typeid": 4,
+      "typename": "MetricBeat"
+    },
+    {
+      "typeid": 5,
+      "typename": "Libvmi"
+    },
+    {
+      "typeid": 6,
+      "typename": "KMonitor"
+    },
+    {
+      "typeid": 7,
+      "typename": "Firewall"
+    }
+  ]
+}
